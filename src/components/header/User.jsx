@@ -6,6 +6,8 @@ import { GrHelp } from "react-icons/gr"
 import { BiLogOut } from "react-icons/bi"
 import { RiImageAddLine } from "react-icons/ri"
 import { Link } from "react-router-dom"
+import symbol from "../../assets/images/symbol.png"
+
 
 export const User = () => {
   const user = true
@@ -19,7 +21,7 @@ export const User = () => {
         {user ? (
           <>
             <button className='img' onClick={() => setProfileOpen(!profileOpen)}>
-              <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
+              <img src={symbol} alt='' />
             </button>
             {profileOpen && (
               <div className='openProfile boxItems' onClick={close}>
@@ -29,8 +31,8 @@ export const User = () => {
                       <img src='https://images.pexels.com/photos/1097456/pexels-photo-1097456.jpeg?auto=compress&cs=tinysrgb&w=600' alt='' />
                     </div>
                     <div className='text'>
-                      <h4>Eden Smith</h4>
-                      <label>Los Angeles, CA</label>
+                      <h4>Trojans</h4>
+                      <label>Chennai Institue of Technology</label>
                     </div>
                   </div>
                 </Link>
@@ -46,14 +48,6 @@ export const User = () => {
                     <h4>My Account</h4>
                   </button>
                 </Link>
-                <button className='box'>
-                  <BsBagCheck className='icon' />
-                  <h4>My Order</h4>
-                </button>
-                <button className='box'>
-                  <AiOutlineHeart className='icon' />
-                  <h4>Wishlist</h4>
-                </button>
                 <button className='box'>
                   <GrHelp className='icon' />
                   <h4>Help</h4>
